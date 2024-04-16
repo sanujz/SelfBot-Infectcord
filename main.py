@@ -3699,4 +3699,4 @@ for cog_class in cog_classes:
 
 token = os.getenv("token")
 
-bot.run(token, reconnect=True)
+bot.run(token)
