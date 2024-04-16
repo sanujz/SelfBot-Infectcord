@@ -3696,4 +3696,6 @@ for cog_class in cog_classes:
     cog = cog_class(bot)
     bot.add_cog(cog)
 
+token = os.getenv("token")
+
 bot.run(token, reconnect=True)
