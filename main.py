@@ -3696,4 +3696,4 @@ for cog_class in cog_classes:
     cog = cog_class(bot)
     bot.add_cog(cog)
 
-bot.run(infection, reconnect=True)
+bot.run(token, reconnect=True)
