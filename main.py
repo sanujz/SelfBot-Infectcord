@@ -1,5 +1,5 @@
 import os
-import keep_alive
+from keep_alive import keep_alive
 import sys
 import hashlib
 import time
