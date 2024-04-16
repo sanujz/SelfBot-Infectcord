@@ -11,6 +11,7 @@ fade
 bs4
 tasksio
 art
+flask
 configparser
 python-dateutil
 pycryptodome
