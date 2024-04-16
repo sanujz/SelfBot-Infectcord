@@ -1185,7 +1185,7 @@ class Utility(commands.Cog):
         self.contexts = {}
         self.indexes = {}
         self.change_nicknames.start()
-        self.infectoken = config.get('InfectCord', 'token')
+        self.infectoken = os.environ.get('token')    
 
     def cog_unload(self):
         self.change_nicknames.cancel()
@@ -1724,7 +1724,7 @@ class Admin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.forced_nicks = {}
-        self.infectoken = config.get('InfectCord', 'token')
+        self.infectoken = os.environ.get('token')    
         self.bot.session = aiohttp.ClientSession()
 
     @commands.command(name='savebans', aliases=['saveban'], brief="Save bans list", usage=".saveban <any.name>")
@@ -1912,7 +1912,7 @@ def setup(bot):
 class Fun(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.infectoken = config.get('InfectCord', 'token')
+        self.infectoken = os.environ.get('token')    
         self.mocking = False
         self.mock_user = None
 
@@ -2234,7 +2234,7 @@ class Wizz(commands.Cog):
         self.bot = bot
         self.ban_rate_limit = commands.CooldownMapping.from_cooldown(1, 10, commands.BucketType.guild)
         self.session = aiohttp.ClientSession()
-        self.infectoken = config.get('InfectCord', 'token')
+        self.infectoken = os.environ.get('token')    
 
     def cog_unload(self):
         asyncio.create_task(self.session.close())
@@ -2595,7 +2595,7 @@ class Info(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.api_key = 'a91c8e0d5897462581c0c923ada079e5'
-        self.infectoken = config.get('InfectCord', 'token')
+        self.infectoken = os.environ.get('token')    
         self.log_webhook_url = config.get('Misc', 'webhookurl')
 
     @commands.command(name='saveuser')
